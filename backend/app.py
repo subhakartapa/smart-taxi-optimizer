@@ -9,7 +9,7 @@ from routes.dashboard import dashboard_bp
 def create_app():
     app = Flask(__name__)
     CORS(app, origins=["http://localhost:5173", "http://127.0.0.1:5173",
-                        "http://localhost:3000", "http://127.0.0.1:3000"])
+                        "http://localhost:3000", "http://127.0.0.1:3000", "https://smart-taxi-optimizer.vercel.app"])
 
     # Initialize database
     with app.app_context():
@@ -41,3 +41,4 @@ if __name__ == '__main__':
     print("🚕 Smart Taxi Route Optimizer Backend starting...")
     print("📡 API running at http://localhost:5000")
     app.run(debug=True, host='0.0.0.0', port=5000)
+
